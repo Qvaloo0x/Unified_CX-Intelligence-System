@@ -1,0 +1,9 @@
+Workflow,QA Score,Security Score,Risks,Suggested Fixes
+00_System_HealthCheck,7,8,"['No retry/fallback', 'Missing logging', 'Slack alerts missing']","['Add retries', 'Log via Logging Engine', 'Slack alert on failure']"
+01_Logging_Engine,9,9,"['No backup if Sheets fails', 'No deduplication']","['Add Drive/email backup', 'Force schema validation']"
+02_Diagnostics,9,7,"['PII leakage to OpenAI', 'No retry if fetch fails']","['Redact data', 'Add retry on fetch failure']"
+03_EWS_Alert_HumanDecision,9,7,"['Slack button spoofing', 'No expiry on token']","['UUID token + expiry', 'Validate decision actor']"
+04_Copywriter_Task_Creation,9,8,"['Task duplication', 'Slack errors unhandled']","['Check existing tasks', 'Retry on Slack fail']"
+05_Content_Review_Approval,8,8,"['No token validation', 'No timeout handling']","['Add approval token', 'Set approval TTL']"
+06_Final_Publishing_Confirmation,7,8,"['Bypass risk (no IF check)', 'Missing logging']","['Add `IF approved === true`', 'Log who publishes']"
+07_Weekly_Report,7,9,"['Static summary, no real analysis', 'No archival']","['Generate metrics from logs', 'Export summary to CSV/PDF']"

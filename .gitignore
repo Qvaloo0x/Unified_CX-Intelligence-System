@@ -1,0 +1,26 @@
+# Node
+node_modules/
+dist/
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+credentials.json
+
+# n8n backups
+*.backup.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Optional
+__pycache__/
