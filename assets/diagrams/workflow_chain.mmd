@@ -1,0 +1,8 @@
+flowchart TD
+HC[00_System_HealthCheck] --> LOG[01_Logging_Engine]
+LOG --> DIAG[02_Diagnostics]
+DIAG --> EWS[03_EWS Alert Human Decision]
+EWS --> COPY[04_Copywriter Task Creation]
+COPY --> REVIEW[05_Content Review Approval]
+REVIEW --> CONFIRM[06_Final Publishing Confirmation]
+CONFIRM --> MANUAL[Manual Publishing]

@@ -1,1 +1,10 @@
 
+flowchart TD
+    A[External Inputs] --> B[Diagnostics]
+    B --> C[Logging]
+    B --> D[EWS Alert Human Decision]
+    D --> E[Copywriter Task Creation]
+    E --> F[Content Review]
+    F --> G[Final Publishing Confirmation]
+    G --> H[Manual Publishing]
+    H --> I[Reporting Layer]

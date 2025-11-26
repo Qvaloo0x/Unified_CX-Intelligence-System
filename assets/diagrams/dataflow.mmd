@@ -1,0 +1,13 @@
+
+flowchart TD
+    A[External Inputs] --> B[Normalization]
+    B --> C[Diagnostics]
+    C --> D[Logging]
+    C --> E[EWS Alert Human Decision]
+    E --> F[Human Decision]
+    F --> G[Asana Tasks]
+    G --> H[Review & Approval]
+    H --> I[Final Confirmation]
+    I --> J[Manual Publishing]
+    D --> K[Weekly Reporting]
+    D --> L[Dashboard Analytics]
